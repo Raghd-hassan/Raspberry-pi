@@ -54,11 +54,7 @@ def read_sht31():
         return None, None
 
 def read_gas_sensors():
-    """
-    قراءة الحالة الرقمية لحساسات الغاز.
-    بما أن الحساس يعطي LOW (False) عند تجاوز الحد، نعكس القيمة لتكون منطقية.
-    is_active = True تعني أن الغاز تجاوز الحد المضبوط على الحساس.
-    """
+   
     try:
         mq135_alert = bool(mq135_do.value == 0)
         mq9_alert = bool(mq9_do.value == 0)
